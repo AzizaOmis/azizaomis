@@ -339,9 +339,6 @@ body{
     .inform__text{
         margin: 0;
     }
-    .text{
-        margin: 0;
-    }
     .read-more{
         margin-top: 10px;
     }
@@ -356,12 +353,13 @@ body{
     }
     .text{
         height: 160px;
+        width: auto;
+        margin:0;
         font-family: 'TT Lakes';
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.2px;
         color: #1B1C21;
-        white-space: pre-line;
         padding-top: 0;
     }
 
