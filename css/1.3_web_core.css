@@ -4,7 +4,6 @@ body{
     padding: 0;  
     background-color: #F8F8F8;
 }
-/*начало: шапка*/
 .header {
     box-sizing: border-box;
     height: 88px;
@@ -145,8 +144,6 @@ body{
     }
     
 }
-/*конец: шапка*/
-/*начало main*/
 .main {
     margin: 0;
     padding: 0;
