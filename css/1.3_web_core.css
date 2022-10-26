@@ -41,7 +41,7 @@ body{
     .header{
         padding: 18.59px 16px;
     }
-    .nav__divider-1 {
+    .nav__divider::before {
         display: none;
     }
     .nav__icon-call {
@@ -68,7 +68,7 @@ body{
     .nav{
         justify-content: flex-start;
     }
-    .nav__divider-1 {
+    .nav__divider::before {
         display: initial;
         margin-left: 20px;
     }
@@ -88,7 +88,7 @@ body{
         display: initial;
         margin-right: 20px;
     }
-    .nav__divider-2{
+    .nav__divider::after{
         margin-right: 20px;
     }
     .nav__icon-repair{
