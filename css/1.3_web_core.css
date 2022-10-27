@@ -197,18 +197,22 @@ body{
 
 
 .main__slider {
-    font-family: "TT Lakes";
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
     height: 40px;
     align-items: center;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-top: 24px;
+    vertical-align: middle;
+    margin: 24px 16px 0 16px;
+    list-style-type: none;
+    padding-inline: 0;
 }
-[class*="slider__slide"]{
+.slider__slide{
+    align-items: center;
+    height: 40px;
+}
+.slider__button{
     -webkit-appearance: none;
     -moz-appearance: none;
          appearance: none;
@@ -221,40 +225,44 @@ body{
     font-family: 'TT Lakes';
     font-size: 16.1px;
     line-height: 24px;
-    
+    border-radius: 6px;
     color: #7E7E82;
     font-weight: 500;
+    cursor: pointer;
 }
-
-.slider__slide1--active {
+.slider__button:hover{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1px #B8FFEC;
+}
+.slider__button:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 3px #B8FFEC;
+}
+.slider__button:active{
+    border: none;
+    background-color: #B8FFEC;
+    outline: none;
+    box-shadow: none;
+}
+.brands .slider__button {
+    width: 220px;
+}
+.device .slider__button {
+    width: 252px;
+}
+.price .slider__button{
+    width: 150px;
+}
+.address .slider__button{
     width: 246px;
-    height: 40px;
-    padding-left: 22.64px;
-    padding-right: 21.7px;
-    border: 2px solid #B8FFEC;
-    border-radius: 6px;
-    box-sizing: border-box;
 }
-.slider__slide2 {
-    width: 219.85px;
-    margin-left: 19px;
-
+.special .slider__button{
+    width: 191px;
 }
-.slider__slide3 {
-    width: 118px;
-    margin-left: 24.15px;
-}
-.slider__slide4 {
-    width: 217px;
-    margin-left: 27px;
-}
-.slider__slide5 {
-    width: 160px;
-    margin-left: 20px;
-}
-.slider__slide6 {
-    width: 71px;
-    margin-left: 24px;
+.reviews .slider__button{
+    width: 96px;
 }
 .slider__gradient{
     padding: 1.2em;
