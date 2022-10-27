@@ -10,29 +10,51 @@ body{
     padding: 0;
     margin: 0;
     background-color: #FFFFFF;
+    border-bottom: 1px solid #D9FFF5;
 }
-.nav {
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     height: 50.81px;
     box-sizing: border-box;
+    list-style-type: none;
+    padding-inline: 0;
 }
 
-[class*="nav__icon"]{
+
+.nav__button {
     -webkit-appearance: none;
     -moz-appearance: none;
          appearance: none;
     border: 0;
-
+    border-radius: 50%;
     margin:0;
     padding: 0;
     background: none;
     display: block;
-    
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer
 }
 
+.nav__button:hover{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1px #c4305c;
+}
+.nav__button:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 3px #c4305c;
+}
+.nav__button:active{
+    border: none;
+    outline: 2px solid #B8FFEC;
+    box-shadow: none;
+}
 [hidden]{
     display: none;
 }
@@ -41,16 +63,16 @@ body{
     .header{
         padding: 18.59px 16px;
     }
-    .nav__divider::before {
+    .nav__icon:nth-child(2) {
         display: none;
     }
-    .nav__icon-call {
+    .call {
         display: none;
     }
-    .nav__icon-chat {
+    .chat {
         display: none;
     }
-    .nav__icon-profile {
+    .profile {
         display: none;
     }
 }
@@ -65,10 +87,10 @@ body{
     .header{
         padding: 18.59px 24px;
     }   
-    .nav{
-        justify-content: flex-start;
+    .header__nav{
+        justify-content: space-between;
     }
-    .nav__divider::before {
+    .nav__icon:nth-child(2) {
         display: initial;
         margin-left: 20px;
     }
@@ -76,22 +98,22 @@ body{
         margin-left: 20.73px;
         margin-right: auto;
     }
-    .nav__icon-call {
+    .call {
         display: initial;
         margin-right: 16px;
     }
-    .nav__icon-chat {
+    .chat {
         display: initial;
         margin-right: 16px;
     }
-    .nav__icon-profile {
+    .profile {
         display: initial;
         margin-right: 20px;
     }
-    .nav__divider::after{
+    .nav__icon:nth-child(7){
         margin-right: 20px;
     }
-    .nav__icon-repair{
+    .repair{
         margin-right: 20px;
     }
 }
@@ -101,7 +123,12 @@ body{
         position: relative;
         top: -88px;
     }
-    .nav__icon-repair{
+    .nav__button{
+        width: auto;
+        height: auto;
+        border-radius: 6px;
+    }
+    .repair .nav__button{
         position: absolute;
         top: 130px;
         right: 232px;
@@ -110,10 +137,10 @@ body{
         box-sizing: border-box;
         align-items: center;
     }
-    .nav__icon-repair img{
+    .repair img{
         margin-left: 8px;
     }
-    .nav__icon-checkstatus{
+    .checkstatus .nav__button{
         position: absolute;
         top: 130px;
         right: 32px;
@@ -121,12 +148,13 @@ body{
         display: flex;
         box-sizing: border-box;
         align-items: center;
+        vertical-align: middle;
     }
-    .nav__icon-checkstatus img{
+    .checkstatus img{
         margin-left: 9px;
     }
     [hidden]{ 
-        display: contents;
+        display: block;
         font-family: 'TT Lakes';
         font-size: 16px;
         line-height: 24px;
@@ -136,7 +164,6 @@ body{
         font-weight: 500;
         white-space: nowrap;
     }
-    
 
     .main{
         position: relative;
@@ -148,13 +175,6 @@ body{
     margin: 0;
     padding: 0;
     
-}
-.horizontal-line{
-    height: 1px;
-    background-color: #D9FFF5;
-    border: none;
-    margin: 0;
-    padding: 0;
 }
 .main__title {
     height: 40px;
@@ -267,12 +287,9 @@ body{
     .slider__gradient{
         display: none;
     }
-    .horizontal-line{
-        visibility: hidden;
-    }
 }
 
-.inform__text {
+.about__text {
     color: #1B1C21;
     font-family: "TT Lakes";
     margin: 16px;
@@ -301,8 +318,18 @@ body{
 }
 
 .read-more {
-    margin-top: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    border: 0;
+    border-radius: 50%;
+    margin:0;
+    padding: 0;
+    background: none;
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 16px;   
 }
 .read-more__icon {
     margin-left: 8px;
@@ -327,19 +354,19 @@ body{
     .slider{
         margin-left: 24px;
     }
-    .main__inform {
+    .main__about {
         display: flex;
         margin: 32px 25px 40px 24px;
         justify-content: space-between;
        
     }
-    .inform__text{
+    .about__text{
         margin: 0;
     }
     .read-more{
         margin-top: 10px;
     }
-    .inform__img{
+    .about__img{
         margin-left: 48px;
     }
     .img {
@@ -362,19 +389,19 @@ body{
 
 }
 @media (min-width: 1120px) {
-    .main__inform{
+    .main__about{
         display: flex;
         margin: 10px 28.65px 49px 32px;
 
     }
-    .inform__text{
+    .about__text{
         margin: 0;
 
     }
     .read-more{
         margin-top: 13.78px;
     }
-    .inform__img{
+    .about__img{
         margin-left: 36px;  
     }
     .img{

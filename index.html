@@ -10,34 +10,33 @@
 </head>
 <body>
     <header class="header">
-        <nav class="header__nav nav">
-            <button class="nav__icon-menu" type="button">
+        <ul class="header__nav nav">
+            <li class="nav__icon menu"><button class="nav__button " type="button">
                 <img src="assets/images/header/burger.svg" alt="menu">
-            </button>
-            <img src="assets/images/header/divider.svg" alt=""class="nav__divider">
-            <img src="assets/images/header/Group.svg" alt="logo" class="nav__logo">
-            <button class="nav__icon-call" type="button">
+            </button></li>
+            <li class="nav__icon nav__divider"><img src="assets/images/header/divider.svg" alt=""></li>
+            <li class="nav__icon nav__logo"><img src="assets/images/header/Group.svg" alt="logo"></li>
+            <li class="nav__icon call"><button class="nav__button" type="button">
                 <img src="assets/images/header/call.svg" alt="call">
-            </button>
-            <button class="nav__icon-chat" type="button">
+            </button></li>
+            <li class="nav__icon chat"><button class="nav__button" type="button">
                 <img src="assets/images/header/chat.svg" alt="chat">
-            </button>
-            <button class="nav__icon-profile" type="button">
+            </button></li>
+            <li class="nav__icon profile"><button class="nav__button" type="button">
                 <img src="assets/images/header/profile.svg" alt="profile">
-            </button>
-            <img src="assets/images/header/divider.svg" alt=""class="nav__divider">
-            <button class="nav__icon-repair" type="button">
-                <div hidden class="nav__icon-repair--desktop">Оставить заявку</div>
+            </button></li>
+            <li class="nav__icon nav__divider"><img src="assets/images/header/divider.svg" alt=""></li>
+            <li class="nav__icon repair"><button class="nav__button" type="button">
+                <span hidden>Оставить заявку</span>
                 <img src="assets/images/header/repair.svg" alt="repair">
-            </button>
-            <button class="nav__icon-checkstatus" type="button">
-                <div hidden class="nav__icon-checkstatus--desktop">Статус ремонта</div>
+            </button></li>
+            <li class="nav__icon checkstatus"><button class="nav__button" type="button">
+                <span hidden>Статус ремонта</span>
                 <img src="assets/images/header/checkstatus.svg" alt="checkstatus">
-            </button>
-        </nav>
+            </button></li>
+        </ul>
     </header>
     <main class="main">
-        <hr class="horizontal-line">
         <div class="main__title title">
             <img src="assets/images/main/highlight.svg" alt="" class="title__hidhlight">
             <h1 class="title__text">Услуги и сервисы</h1>
@@ -51,18 +50,18 @@
             <button type="button" class="slider__slide6">Отзывы</button>
             <div class="slider__gradient"></div>
         </div>
-        <div class="main__inform">    
-            <section class="inform__text">
+        <div class="main__about about">    
+            <section class="about__text">
                 <div class="text">
                     <p class="text__p1">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
                     <p class="text__p2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
                 </div>
-                <div class="read-more">
+                <button type="button" class="read-more">
                     <img src="assets/images/main/icon.svg" alt="read-more" class="read-more__icon">
-                    <a class="read-more__text">Читать далее</a>
-                </div>
+                    <span class="read-more__text">Читать далее</span>
+                </button>
             </section>
-            <div class="inform__img"><img src="assets/images/main/MG_3223.png" alt=" " class="img"></div>
+            <div class="about__img"><img src="assets/images/main/MG_3223.png" alt=" " class="img"></div>
         </div>
     </main>
 </body>
