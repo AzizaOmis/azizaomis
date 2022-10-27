@@ -195,7 +195,6 @@ body{
     letter-spacing: -0.6px;
 }
 
-
 .main__slider {
     display: flex;
     flex-wrap: nowrap;
@@ -211,6 +210,9 @@ body{
 .slider__slide{
     align-items: center;
     height: 40px;
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 .slider__button{
     -webkit-appearance: none;
