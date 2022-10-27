@@ -231,16 +231,15 @@ body{
     color: #7E7E82;
     font-weight: 500;
     cursor: pointer;
+    box-sizing: border-box;
 }
 .slider__button:hover{
-    border: none;
+    border: 1px solid #B8FFEC;
     outline: none;
-    box-shadow: 0 0 0 1px #B8FFEC;
 }
 .slider__button:focus{
-    border: none;
+    border: 3px solid #B8FFEC;
     outline: none;
-    box-shadow: 0 0 0 3px #B8FFEC;
 }
 .slider__button:active{
     border: none;
