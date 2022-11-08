@@ -165,10 +165,7 @@ body{
         justify-content: space-between;
         align-items: center;
     }
-    .header__list .checkstatus .button{
-        
-
-    }
+    
     [hidden]{ 
         display: block;
         font-family: 'TT Lakes';
