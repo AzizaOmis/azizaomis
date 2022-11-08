@@ -5,9 +5,11 @@ body{
     background-color: #F8F8F8;
 }
 .header {
+    display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
     height: 88px;
-    padding: 0;
+    padding: 16px 24px;
     margin: 0;
     background-color: #FFFFFF;
     border-bottom: 1px solid #D9FFF5;
@@ -17,14 +19,41 @@ body{
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    padding: 0;
     height: 50.81px;
+    width: 180px;
     box-sizing: border-box;
-    list-style-type: none;
-    padding-inline: 0;
+    list-style: none;
+}
+.header__nav li{
+    padding: 0;
+    margin: 0;
+}
+.header__burger{
+    display: flex;
+    align-items: center;
+}
+.header__burger::after{
+    content: "";
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+    margin-left: 20px;
+}
+.header__logo{
+    display: block;
+    width: 98px;
+    height: 52px;
+}
+.header__logo a{
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 52px;
 }
 
-
-.nav__button {
+.button {
     -webkit-appearance: none;
     -moz-appearance: none;
          appearance: none;
@@ -40,17 +69,42 @@ body{
     cursor: pointer;
 }
 
-.nav__button:hover{
+.header__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.header__list .profile{
+    display: flex;
+    align-items: center;
+}
+.header__list .profile::after{
+    content: "";
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+    margin-left: 20px;
+}
+.header__item{
+    padding: 0;
+    margin: 0;
+     
+}
+.button:hover{
     border: none;
     outline: none;
     box-shadow: 0 0 0 1px #c4305c;
 }
-.nav__button:focus{
+.button:focus{
     border: none;
     outline: none;
     box-shadow: 0 0 0 3px #c4305c;
 }
-.nav__button:active{
+.button:active{
     border: none;
     outline: 2px solid #B8FFEC;
     box-shadow: none;
@@ -63,95 +117,57 @@ body{
     .header{
         padding: 18.59px 16px;
     }
-    .nav__icon:nth-child(2) {
+    .header__nav{
+        width: 160px;
+    }
+    .header__burger::after{
         display: none;
     }
-    .call {
+    .header__list{
+        margin: 0;
+    }
+    .call,
+    .chat,
+    .header__list .profile{
         display: none;
     }
-    .chat {
-        display: none;
+    .header__list .repair{
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
     }
-    .profile {
-        display: none;
+    .header__list .repair::before{
+        content: "";
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+        margin-right: 20px;
     }
-}
-
-.nav__logo {
-    width: 96.55px;
-    height: 50.81px;
 }
 
 
 @media (min-width: 768px) {
-    .header{
-        padding: 18.59px 24px;
-    }   
-    .header__nav{
-        justify-content: space-between;
-    }
-    .nav__icon:nth-child(2) {
-        display: initial;
-        margin-left: 20px;
-    }
-    .nav__logo{
-        margin-left: 20.73px;
-        margin-right: auto;
-    }
-    .call {
-        display: initial;
-        margin-right: 16px;
-    }
-    .chat {
-        display: initial;
-        margin-right: 16px;
-    }
-    .profile {
-        display: initial;
-        margin-right: 20px;
-    }
-    .nav__icon:nth-child(7){
-        margin-right: 20px;
-    }
-    .repair{
-        margin-right: 20px;
+    .header__list{
+        width: 290px;
+
     }
 }
 
 @media (min-width: 1120px) {
     .header{
-        position: relative;
-        top: -88px;
+        transform: translateY(-88px);
     }
-    .nav__button{
-        width: auto;
-        height: auto;
-        border-radius: 6px;
-    }
-    .repair .nav__button{
-        position: absolute;
-        top: 130px;
-        right: 232px;
-        z-index: 100;
+    .header__list .repair .button,
+    .header__list .checkstatus .button{
+        transform: translateY(88px);
         display: flex;
-        box-sizing: border-box;
+        justify-content: space-between;
         align-items: center;
     }
-    .repair img{
-        margin-left: 8px;
-    }
-    .checkstatus .nav__button{
-        position: absolute;
-        top: 130px;
-        right: 32px;
-        z-index: 100;
-        display: flex;
-        box-sizing: border-box;
-        align-items: center;
-        vertical-align: middle;
-    }
-    .checkstatus img{
-        margin-left: 9px;
+    .header__list .checkstatus .button{
+        
+
     }
     [hidden]{ 
         display: block;
@@ -164,12 +180,9 @@ body{
         font-weight: 500;
         white-space: nowrap;
     }
-
     .main{
-        position: relative;
-        top: -88px;
+        transform: translateY(-88px);
     }
-    
 }
 .main {
     margin: 0;
@@ -305,28 +318,17 @@ body{
     margin: 16px;
     margin-top: 24px;
     padding: 0;
-}
-.text{
+    display: block;
+    height: 90px;
+    overflow: hidden;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
-    height: 90px;
-    overflow: hidden;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
 }
-.text__p1 {
-    margin:0;
-    box-sizing: border-box;
+.about__text p{
+    display: block;
+    margin-top: 0;
 }
-.text__p2 {
-    margin: 0;
-    margin-top: 1.2em;
-    box-sizing: border-box;
-}
-
 .read-more {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -385,6 +387,9 @@ body{
     }
     .about__text{
         margin: 0;
+        height: 160px;
+        font-size: 14px;
+        line-height: 20px;
     }
     .read-more{
         margin-top: 10px;
@@ -397,17 +402,6 @@ body{
         border-radius: 6px;
         width: 360px; 
         height: auto;
-    }
-    .text{
-        height: 160px;
-        width: auto;
-        margin:0;
-        font-family: 'TT Lakes';
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.2px;
-        color: #1B1C21;
-        padding-top: 0;
     }
 
 }
