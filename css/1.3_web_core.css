@@ -158,14 +158,6 @@ body{
     .header{
         transform: translateY(-88px);
     }
-    .header__list .repair .button,
-    .header__list .checkstatus .button{
-        transform: translateY(88px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
     [hidden]{ 
         display: block;
         font-family: 'TT Lakes';
@@ -176,6 +168,29 @@ body{
         color: #1B1C21;
         font-weight: 500;
         white-space: nowrap;
+    }
+    .header__list .repair,
+    .header__list .checkstatus{
+        transform: translateY(88px) translateX(-238px);
+        width: 174px;
+        height: 40px;
+        margin: 0;
+    }
+    .header__list .repair .button,
+    .header__list .checkstatus .button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 174px;
+        height: 40px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .header__list .repair {
+        margin-right: 32px;
+    }
+    .header__list .checkstatus{
+        margin-right: 32px;
     }
     .main{
         transform: translateY(-88px);
