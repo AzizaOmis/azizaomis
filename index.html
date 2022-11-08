@@ -2,69 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>1.3_web_core</title>
-    <link rel="stylesheet" href="css/1.3_web_core.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link href="assets/fonts/stylesheet.css" rel="stylesheet">
     <link href="assets/fonts/demo.html">
+    <title>1.4</title>
 </head>
 <body>
-    <header>
-        <div class="header">
-            <ul class="header__nav">
-                <li class="header__burger"><button class="button" type="button">
-                    <img src="assets/images/header/burger.svg" alt="menu">
-                </button></li>
-                <li class="header__logo"><a href="#"><img src="assets/images/header/Group.svg" alt="logo"></a></li>
-            </ul>
-            <ul class="header__list">
-                <li class="header__item call"><button class="button" type="button">
-                    <img src="assets/images/header/call.svg" alt="call">
-                </button></li>
-                <li class="header__item chat"><button class="button" type="button">
-                    <img src="assets/images/header/chat.svg" alt="chat">
-                </button></li>
-                <li class="header__item profile"><button class="button" type="button">
-                    <img src="assets/images/header/profile.svg" alt="profile">
-                </button></li>
-                <li class="header__item repair"><button class="button" type="button">
-                    <span hidden>Оставить заявку</span>
-                    <img src="assets/images/header/repair.svg" alt="repair">
-                </button></li>
-                <li class="header__item checkstatus"><button class="button" type="button">
-                    <span hidden>Статус ремонта</span>
-                    <img src="assets/images/header/checkstatus.svg" alt="checkstatus">
-                </button></li>
-            </ul>
-        </div>
-    </header>
-    <main class="main">
-        <div class="main__title title">
-            <img src="assets/images/main/highlight.svg" alt="" class="title__hidhlight">
-            <h1 class="title__text">Услуги и сервисы</h1>
-        </div>
-        <nav><ul class="main__slider slider">
-            <li class="slider__slide brands"><button type="button" class="slider__button">Ремонтируемые бренды</button></li>
-            <li class="slider__slide device"><button type="button" class="slider__button">Ремонтируемые устройства</button></li>
-            <li class="slider__slide price"><button type="button" class="slider__button">Цены на услуги</button></li>
-            <li class="slider__slide address"><button type="button" class="slider__button">Адреса сервисных центров</button></li>
-            <li class="slider__slide special"><button type="button" class="slider__button">Специальные цены</button></li>
-            <li class="slider__slide reviews"><button type="button" class="slider__button">Отзывы</button></li>
-            <li class="slider__gradient"><div ></div></li>
-        </ul></nav>
-        <div class="main__about about">    
-            <section class="about__section">
-                <div class="about__text">
-                    <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                    <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-                </div>
-                <button type="button" class="about__read-more read-more">
-                    <img src="assets/images/main/icon.svg" alt="read-more" class="read-more__icon">
-                    <span class="read-more__text">Читать далее</span>
+    <div class="main-menu">
+        <header class="main-menu__header header">
+            <nav class="header__nav">
+                <button class="header__burger button" type="button">
+                    <img src="assets/images/header/burger_close.svg" alt="burger">
                 </button>
-            </section>
-            <div class="about__img"><img src="assets/images/main/MG_3223.png" alt=" " class="img"></div>
-        </div>
-    </main>
+                <a href="#" class="header__logo"><img src="assets/images/header/Group.svg" alt="logo"></a>
+            </nav>
+            <button class="header__search button">
+                <img src="assets/images/header/search.svg" alt="search">
+            </button>
+        </header>
+        <div class="main-menu__container container">
+            <nav class="container__nav">
+                <ul class="container__list">
+                    <li class="container__item active"><a href="#">Ремонт техники</a></li>
+                    <li class="container__item"><a href="#">Услуги и сервисы</a></li>
+                    <li class="container__item"><a href="#">Корпоративным клиентам</a></li>
+                    <li class="container__item"><a href="#">Продавцам техники</a></li>
+                    <li class="container__item"><a href="#">Партнерам</a></li>
+                    <li class="container__item"><a href="#">Производителям</a></li>
+                    <li class="container__item"><a href="#">Наши сервисные центры</a></li>
+                    <li class="container__item"><a href="#">Контакты</a></li>
+                </ul> 
+            </nav>
+            <div class="container__contacts contacts">
+                <ul class="contacts__list"> 
+                    <li class="contacts__item"><button class="button" type="button">
+                        <img src="assets/images/header/call.svg" alt="call">
+                    </button></li>
+                    <li class="contacts__item"><button class="button" type="button">
+                        <img src="assets/images/header/chat.svg" alt="chat">
+                    </button></li>
+                    <li class="contacts__item"><button class="button" type="button">
+                        <img src="assets/images/header/profile.svg" alt="profile">
+                    </button></li>
+                </ul> 
+                <div class="contacts__info">
+                    <div class="contacts__adres"><a href="#">mail@cps.com</a></div>
+                    <div class="contacts__phone">8 800 890 8900</div>
+                </div>
+            </div>
+            <nav class="container__lang lang">
+                <ul class="lang__list">
+                    <li class="lang__item active"><a href="#">RU</a></li>
+                    <li class="lang__item"><a href="#">EN</a></li>
+                    <li class="lang__item"><a href="#">CH</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </div>
 </body>
 </html>
