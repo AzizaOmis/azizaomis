@@ -261,6 +261,6 @@ body{
 .lang__input:checked + .lang__text{
     color: #7E7E82;
 }
-.lang__input--active + .lang__text{
+.lang__input--active .lang__text{
     color:#7E7E82;
 }
