@@ -5,61 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link href="css/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <link href="assets/fonts/demo.html">
     <title>1.4</title>
 </head>
 <body>
-    <div class="main-menu">
-        <header class="main-menu__header header">
-            <nav class="header__nav">
+    <aside class="aside">
+        <div class="aside__main-menu">
+            <div class="aside__header header">
                 <button class="header__burger button" type="button">
                     <img src="assets/images/header/burger_close.svg" alt="burger">
                 </button>
                 <a href="#" class="header__logo"><img src="assets/images/header/Group.svg" alt="logo"></a>
-            </nav>
-            <button class="header__search button">
-                <img src="assets/images/header/search.svg" alt="search">
-            </button>
-        </header>
-        <div class="main-menu__container container">
-            <nav class="container__nav">
-                <ul class="container__list">
-                    <li class="container__item active"><a href="#">Ремонт техники</a></li>
-                    <li class="container__item"><a href="#">Услуги и сервисы</a></li>
-                    <li class="container__item"><a href="#">Корпоративным клиентам</a></li>
-                    <li class="container__item"><a href="#">Продавцам техники</a></li>
-                    <li class="container__item"><a href="#">Партнерам</a></li>
-                    <li class="container__item"><a href="#">Производителям</a></li>
-                    <li class="container__item"><a href="#">Наши сервисные центры</a></li>
-                    <li class="container__item"><a href="#">Контакты</a></li>
-                </ul> 
-            </nav>
-            <div class="container__contacts contacts">
-                <ul class="contacts__list"> 
-                    <li class="contacts__item"><button class="button" type="button">
+                <button class="header__search button">
+                    <img src="assets/images/header/search.svg" alt="search">
+                </button>
+            </div>
+            <div class="aside__main main">
+                <nav class="main__nav">
+                    <ul class="main__list">
+                        <li class="main__item main__item--active"><a href="#" class="main__text">Ремонт техники</a></li>
+                        <li class="main__item"><a href="#" class="main__text">Услуги и сервисы</a></li>
+                        <li class="main__item"><a href="#" class="main__text">Корпоративным клиентам</a></li>
+                        <li class="main__item"><a href="#" class="main__text">Продавцам техники</a></li>
+                        <li class="main__item"><a href="#" class="main__text">Партнерам</a></li>
+                        <li class="main__item"><a href="#" class="main__text">Производителям</a></li>
+                        <li class="main__item"><a href="#" class="main__text">Наши сервисные центры</a></li>
+                        <li class="main__item"><a href="#" class="main__text">Контакты</a></li>
+                    </ul> 
+                </nav>
+            </div>
+            <div class="aside__footer footer">
+                <ul class="footer__list"> 
+                    <li class="footer__item"><button class="button" type="button">
                         <img src="assets/images/header/call.svg" alt="call">
                     </button></li>
-                    <li class="contacts__item"><button class="button" type="button">
+                    <li class="footer__item"><button class="button" type="button">
                         <img src="assets/images/header/chat.svg" alt="chat">
                     </button></li>
-                    <li class="contacts__item"><button class="button" type="button">
+                    <li class="footer__item"><button class="button" type="button">
                         <img src="assets/images/header/profile.svg" alt="profile">
                     </button></li>
                 </ul> 
-                <div class="contacts__info">
-                    <div class="contacts__adres"><a href="#">mail@cps.com</a></div>
-                    <div class="contacts__phone">8 800 890 8900</div>
+                <div class="footer__contacts">
+                    <a mail="" class="footer__adress" href="#">mail@cps.com</a>
+                    <a tel="" class="footer__phone" href="#">8 800 890 8900</a>
+                </div>
+                <div class="footer__lang lang">
+                    <input type="radio" id="ru" name="language" class="lang__input">
+                    <label for="ru" class="lang__text">RU</label>
+                    <input type="radio" id="en" name="language" class="lang__input">
+                    <label for="en" class="lang__text">EN</label>
+                    <input type="radio" id="ch" name="language" class="lang__input">
+                    <label for="ch" class="lang__text">CH</label>
                 </div>
             </div>
-            <nav class="container__lang lang">
-                <ul class="lang__list">
-                    <li class="lang__item active"><a href="#">RU</a></li>
-                    <li class="lang__item"><a href="#">EN</a></li>
-                    <li class="lang__item"><a href="#">CH</a></li>
-                </ul>
-            </nav>
-        </div> 
-    </div>
+        </div>
+    </aside>
 </body>
 </html>
