@@ -240,9 +240,6 @@ body{
     color: #1B1C21;
     text-decoration: none;
 }
-.lang__input--active + .lang__text{
-    color:#7E7E82;
-}
 .lang__input:hover + .lang__text{
     outline: none;
     border: none;
@@ -261,4 +258,7 @@ body{
 }
 .lang__input:checked + .lang__text{
     color: #7E7E82;
+}
+.lang__input--active + .lang__text{
+    color:#7E7E82;
 }
