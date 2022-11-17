@@ -90,7 +90,7 @@ button{
     .cards__card:last-child{
         display: none;
     }
-    .cards__button{
+    .cards__button-more{
         display: none;
     }
 }
