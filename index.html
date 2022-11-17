@@ -4,63 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <title>1.5</title>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link href="assets/fonts/demo.html">
-    <title>1.4</title>
+    <link rel="stylesheet" href="assets/fonts/demo.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/1.5_style.css">
+
 </head>
 <body>
-    <aside class="aside">
-        <div class="aside__main-menu">
-            <div class="aside__header header">
-                <button class="header__burger button" type="button">
-                    <img src="assets/images/header/burger_close.svg" alt="burger">
-                </button>
-                <a href="#" class="header__logo"><img src="assets/images/header/Group.svg" alt="logo"></a>
-                <button class="header__search button">
-                    <img src="assets/images/header/search.svg" alt="search">
-                </button>
-            </div>
-            <div class="aside__main main">
-                <nav class="main__nav">
-                    <ul class="main__list">
-                        <li class="main__item main__item--active"><a href="#" class="main__text">Ремонт техники</a></li>
-                        <li class="main__item"><a href="#" class="main__text">Услуги и сервисы</a></li>
-                        <li class="main__item"><a href="#" class="main__text">Корпоративным клиентам</a></li>
-                        <li class="main__item"><a href="#" class="main__text">Продавцам техники</a></li>
-                        <li class="main__item"><a href="#" class="main__text">Партнерам</a></li>
-                        <li class="main__item"><a href="#" class="main__text">Производителям</a></li>
-                        <li class="main__item"><a href="#" class="main__text">Наши сервисные центры</a></li>
-                        <li class="main__item"><a href="#" class="main__text">Контакты</a></li>
-                    </ul> 
-                </nav>
-            </div>
-            <div class="aside__footer footer">
-                <ul class="footer__list"> 
-                    <li class="footer__item"><button class="button" type="button">
-                        <img src="assets/images/header/call.svg" alt="call">
-                    </button></li>
-                    <li class="footer__item"><button class="button" type="button">
-                        <img src="assets/images/header/chat.svg" alt="chat">
-                    </button></li>
-                    <li class="footer__item"><button class="button" type="button">
-                        <img src="assets/images/header/profile.svg" alt="profile">
-                    </button></li>
-                </ul> 
-                <div class="footer__contacts">
-                    <a mail="" class="footer__adress" href="#">mail@cps.com</a>
-                    <a tel="" class="footer__phone" href="#">8 800 890 8900</a>
+    <section class="brands">
+        <div class="brands__title">
+            <p>Ремонт техники различных брендов</p> 
+        </div>
+        <div class="slider-container brands__about">
+            <div class="swiper-container brands__container">
+                <div class="swiper-wrapper brands__cards brands__cards--close cards ">
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/lenovo.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>                        
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/samsung.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/apple.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/viewsonic.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/bosch.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/hp.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/acer.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/sony.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/lenovo.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
+                    <div class="swiper-slide cards__card">
+                        <div class="cards__logo">
+                            <img src="assets/images/main/swiper/samsung.svg" alt="logo">
+                        </div>
+                        <button class="cards__dropdown button" type="button"></button>
+                    </div>
                 </div>
-                <div class="footer__lang lang">
-                    <input type="radio" id="ru" name="language" class="lang__input lang__input--active">
-                    <label for="ru" class="lang__text">RU</label>
-                    <input type="radio" id="en" name="language" class="lang__input">
-                    <label for="en" class="lang__text">EN</label>
-                    <input type="radio" id="ch" name="language" class="lang__input">
-                    <label for="ch" class="lang__text">CH</label>
-                </div>
+                <div class="swiper-pagination"></div>
+                <button class="cards__button-more more cards__button-more--open" onclick='readMore()' type="button">
+                    <img class="more__icon" alt=" " src="assets/images/main/icon.svg">
+                    <p class="more__text">Показать все</p>
+                </button>
+
             </div>
         </div>
-    </aside>
+    </section>
 </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/1.5_script.js"></script>
 </html>

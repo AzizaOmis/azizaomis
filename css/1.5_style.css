@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F8F8F8;
+}
+img{
+    margin: 0;
+    padding: 0;
+}
+button{
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    background: none;
+    display: block;
+    align-items: center;
+    cursor: pointer;
+}
+.brands{
+    min-height: 234px;
+    
+    
+}
+.brands__title{
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    padding: 16px;
+    border-top: 1px solid #D9FFF5;
+    background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    box-sizing: border-box;
+}
+@media (max-width: 767.9px) {
+    .slider-container{
+        height: 154px;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+    }
+    .swiper-container{
+        margin: 16px;
+        height: 100px;
+    }
+    .swiper-wrapper{
+        height: 72px;
+        margin-bottom: 16px;
+    }
+    .swiper-pagination{
+        position:initial;
+        height: 12px;
+        padding: 0 42px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .swiper-pagination-bullet{
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #DDDDDD;
+        opacity: 1;
+        margin: 0;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #B5B6BC;
+        opacity: 1;
+    }
+    
+    .slider-container::after{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        content: '';
+        width: 24px;
+        height: 81px;
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+        z-index: 10;
+    }
+    .cards__card:last-child{
+        display: none;
+    }
+    .cards__button{
+        display: none;
+    }
+}
+.slider-container::after{
+    display: none;
+}
+.cards__card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    min-height: 72px;
+    padding: 0 16px;
+}
+.cards__dropdown{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: url(../assets/images/main/swiper/go.svg) no-repeat 55% 50%;
+    transition: 0.1s all ease-in-out;
+}
+.cards__dropdown:hover{
+    border: 3px solid #FF3E79;
+}
+.cards__dropdown:focus{
+    border: 4px solid #FF3E79;
+}
+.cards__dropdown:active{
+    border: 2px solid #7E7E82;
+}
+@media (min-width: 768px) {
+    .brands__about{
+        height: 100%;
+    }
+    .brands__container{
+        margin: 24px;
+        margin-bottom: 34px;
+        height: auto;
+    }
+    .brands__cards{
+        display: grid;
+        padding: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 24px;
+    }
+    .cards__card{
+        width: 224px;
+        height: 72px;
+    }
+    .swiper-pagination{
+        display: none;
+    }
+    .cards__button-more{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 16px;
+        padding: 0 8px;
+        font-family: 'TT Lakes';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;  
+        border-radius: 6px;      
+    }
+   .more__icon{
+        display: block;
+        margin-right: 15px;
+   }
+   .more__icon--rotate{
+        transform: rotate(180deg);
+   }
+   .cards__button-more:hover{
+    text-decoration: underline;
+   }
+   .cards__button-more:focus{
+    border: 1px solid #7E7E82;
+   }
+   .cards__button-more:active{
+    box-shadow:  0 0 4px 0 #7E7E82;
+   }
+    .brands__cards--open{
+        overflow: visible;
+        height: auto;
+    }
+    .brands__cards--close{
+        overflow: hidden;
+        height: 160px;
+    }
+}
+@media (min-width: 1120px) {
+    .brands__cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 32px;
+    }
+    .cards__card{
+        width: 240px;
+    }
+}
