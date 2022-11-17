@@ -8,6 +8,7 @@ window.onresize = function () {
     }
 };
 
+
 if (pageWidth < 768){
     const slider = document.querySelector('.swiper-container');
 
@@ -22,7 +23,6 @@ if (pageWidth < 768){
         },
     });
 };
-
 
 
 function readMore(){
@@ -45,12 +45,7 @@ function readMore(){
         cardsButton.classList.add('cards__button-more--open');      
         brandsCards.classList.remove('brands__cards--open');
         brandsCards.classList.add('brands__cards--close');
-    };
-    
-    
-    
-    
-    
+    };    
 };
     
 
