@@ -1,53 +1,40 @@
-const pageWidth = document.documentElement.scrollWidth;
-let oldWidth = window.innerWidth;
-window.onresize = function () {
-    var newWidth = window.innerWidth;
-    if (newWidth != oldWidth) {
-        oldWidth = newWidth;
-        location.reload();
-    }
-};
+window.addEventListener('DOMContentLoaded', () => {
+  const slider = document.querySelector('.swiper-container');
+  const mediaQuery = '(max-width: 767.9px)';
+  const mediaQueryList = window.matchMedia(mediaQuery);
 
+  var swiper = new Swiper(slider, {
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
 
-if (pageWidth < 768){
-    const slider = document.querySelector('.swiper-container');
-
-    let swiper = new Swiper(slider, {
-        slidesPerView: 1.2,
-        spaceBetween: 16,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-
-        },
-    });
-};
-
-
-function readMore(){
-    let brandsCards = document.querySelector('.brands__cards');
-    let cardsButton = document.querySelector('.cards__button-more');
-    let buttonIcon = document.querySelector('.more__icon');
-    let buttonText = document.querySelector('.more__text');
-
-    if (cardsButton.classList.contains('cards__button-more--open')){
-        buttonText.textContent = 'Скрыть';
-        buttonIcon.classList.add('more__icon--rotate');
-        cardsButton.classList.remove('cards__button-more--open');
-        cardsButton.classList.add('cards__button-more--close');
-        brandsCards.classList.remove('brands__cards--close');
-        brandsCards.classList.add('brands__cards--open');
+      clickable: true,
+    },
+  });
+  if (!mediaQueryList.matches) {
+    swiper.destroy();
+  }
+  const buttonMore = document.querySelector('.cards__button-more');
+  const brandsCards = document.querySelector('.brands__cards');
+  const buttonIcon = buttonMore.querySelector('.more__icon');
+  const buttonText = buttonMore.querySelector('.more__text');
+  buttonMore.addEventListener('click', function () {
+    if (buttonMore.classList.contains('cards__button-more--open')) {
+      buttonText.textContent = 'Скрыть';
+      buttonIcon.classList.toggle('more__icon--rotate');
+      buttonMore.classList.toggle('cards__button-more--open');
+      buttonMore.classList.toggle('cards__button-more--close');
+      brandsCards.classList.toggle('brands__cards--close');
+      brandsCards.classList.toggle('brands__cards--open');
     } else {
-        buttonText.textContent = 'Показать все';
-        buttonIcon.classList.remove('more__icon--rotate');
-        cardsButton.classList.remove('cards__button-more--close');
-        cardsButton.classList.add('cards__button-more--open');      
-        brandsCards.classList.remove('brands__cards--open');
-        brandsCards.classList.add('brands__cards--close');
-    };    
-};
-    
-
-
-
+      buttonText.textContent = 'Показать все';
+      buttonIcon.classList.toggle('more__icon--rotate');
+      buttonMore.classList.toggle('cards__button-more--close');
+      buttonMore.classList.toggle('cards__button-more--open');
+      brandsCards.classList.toggle('brands__cards--open');
+      brandsCards.classList.toggle('brands__cards--close');
+    }
+  });
+});

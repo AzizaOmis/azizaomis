@@ -1,10 +1,16 @@
+:root{
+    --main-bg-color: #F8F8F8;
+    --focus-color: #7E7E82;
+    --active-color: #1B1C21;
+    --white: #ffffff;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: #F8F8F8;
+    background-color: var(--main-bg-color);
 }
 img{
     margin: 0;
@@ -31,14 +37,15 @@ button{
 }
 .brands__title{
     font-family: 'TT Lakes';
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     text-transform: uppercase;
-    color: #7E7E82;
+    color: var(--focus-color);
     padding: 16px;
     border-top: 1px solid #D9FFF5;
-    background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    background: linear-gradient(-270deg, var(--main-bg-color) 0%, var(--white) 98.61%);
     box-sizing: border-box;
 }
 @media (max-width: 767.9px) {
@@ -84,7 +91,7 @@ button{
         content: '';
         width: 24px;
         height: 81px;
-        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+        background: linear-gradient(270deg, var(--main-bg-color) 16.84%, rgba(248, 248, 248, 0.0001) 100%);
         z-index: 10;
     }
     .cards__card:last-child{
@@ -101,36 +108,32 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #FFFFFF;
+    background: var(--white);
     border: 1px solid #EAEAEA;
     border-radius: 6px;
     min-height: 72px;
     padding: 0 16px;
 }
+.cards__card:hover{
+    border: 1px solid var(--focus-color);
+}
+.cards__card:focus{
+    border: 2px solid var(--focus-color);
+}
+.cards__card:active{
+    border: 1px solid var(--active-color);
+}
 .cards__dropdown{
     width: 40px;
     height: 40px;
-    border: 2px solid #FF3E79;
-    border-radius: 50%;
-    box-sizing: border-box;
-    background: url(../assets/images/main/swiper/go.svg) no-repeat 55% 50%;
-    transition: 0.1s all ease-in-out;
-}
-.cards__dropdown:hover{
-    border: 3px solid #FF3E79;
-}
-.cards__dropdown:focus{
-    border: 4px solid #FF3E79;
-}
-.cards__dropdown:active{
-    border: 2px solid #7E7E82;
 }
 @media (min-width: 768px) {
     .brands__about{
         height: 100%;
     }
     .brands__container{
-        margin: 24px;
+        
+        padding: 24px;
         margin-bottom: 34px;
         height: auto;
     }
@@ -159,7 +162,7 @@ button{
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px;
-        color: #1B1C21;  
+        color: var(--active-color);  
         border-radius: 6px;      
     }
    .more__icon{
@@ -173,10 +176,10 @@ button{
     text-decoration: underline;
    }
    .cards__button-more:focus{
-    border: 1px solid #7E7E82;
+    border: 1px solid var(--focus-color);
    }
    .cards__button-more:active{
-    box-shadow:  0 0 4px 0 #7E7E82;
+    border: 1px solid var(--active-color);
    }
     .brands__cards--open{
         overflow: visible;
@@ -186,6 +189,7 @@ button{
         overflow: hidden;
         height: 160px;
     }
+    
 }
 @media (min-width: 1120px) {
     .brands__cards{
