@@ -25,19 +25,22 @@ window.addEventListener('DOMContentLoaded', () => {
       brandsCards.classList.toggle('brands__cards--close');
     }
   });
-  if (mediaQueryList.matches) {
-    swiper = new Swiper(slider, {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
+  function swiperInit() {
+    if (mediaQueryList.matches) {
+      swiper = new Swiper(slider, {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
 
-        clickable: true,
-      },
-    });
-  } else {
-    swiper.destroy();
-    swiper = undefined;
+          clickable: true,
+        },
+      });
+    } else {
+      swiper.destroy();
+      swiper = undefined;
+    }
   }
+  swiperInit();
 });
