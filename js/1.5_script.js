@@ -2,18 +2,20 @@ window.addEventListener('DOMContentLoaded', () => {
   const slider = document.querySelector('.swiper-container');
   const mediaQuery = '(max-width: 767.9px)';
   const mediaQueryList = window.matchMedia(mediaQuery);
+  let swiper = undefined;
 
-  var swiper = new Swiper(slider, {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
+  if (mediaQueryList.matches) {
+    swiper = new Swiper(slider, {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
 
-      clickable: true,
-    },
-  });
-  if (!mediaQueryList.matches) {
+        clickable: true,
+      },
+    });
+  } else {
     swiper.destroy();
   }
   const buttonMore = document.querySelector('.cards__button-more');
