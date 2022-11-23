@@ -25,8 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
       brandsCards.classList.toggle('brands__cards--close');
     }
   });
-  function swiperInit() {
-    if (mediaQueryList.matches) {
+  mediaQueryList.addEventListener('change', (event) => {
+    if (event.matches) {
       swiper = new Swiper(slider, {
         slidesPerView: 1.2,
         spaceBetween: 16,
@@ -39,8 +39,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     } else {
       swiper.destroy();
-      swiper = undefined;
     }
-  }
-  swiperInit();
+  });
 });
