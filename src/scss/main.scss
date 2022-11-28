@@ -1,0 +1,218 @@
+.main{
+    max-height: 537px;
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        display: flex;
+        height: 40px;
+        vertical-align: middle;
+        margin-top: 24px;
+    }
+    &__title h1{
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+    }
+    &__title::before{
+        margin-right: 12px;
+        content: '';
+        height: 40px;
+        width: 4px;
+        background-color: var(--blue-divider-color);
+        border-radius: 0 4px 4px 0;
+    }
+    &__nav{
+        margin-top: 24px;
+    }
+    &__list{
+        margin-left: 16px;
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+    }
+    &__item{
+        display: block;
+        height: 40px;
+        padding: 8px;
+        margin-right: 8px;
+    }
+    &__link{
+        display: inline;
+        padding: 6px;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: var(--focus-color);
+        border-radius: 6px;
+    }
+    &__link:hover{
+        text-decoration: underline;
+    }
+    &__link:focus{
+        outline: 2px solid var(--blue-border-color);
+    }
+    &__link:active{
+        color: var(--active-color);
+    }
+    &__list::after{
+        position: sticky;
+        right: 0;
+        display: block;
+        width: 40px;
+        padding: 12px;
+        height: 16px;
+        content: '';
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    }
+    &__about{
+        margin-top: 24px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__idea{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    &__text{
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+    }
+    &__text--close{
+        height: 90px;
+    }
+    &__text--open{
+        height: auto;
+    }
+    &__read-more{
+        margin-bottom: 16px;
+        margin-top: 16px;
+        display: flex;
+        width: auto;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+        border-radius: 6px;
+    }
+    &__read-more:hover{
+        text-decoration: underline;
+    }
+    &__read-more:focus{
+        background-color: var(--border-color);
+    }
+    &__read-more:active{
+        outline: 1px solid var(--focus-color);
+    }
+    &__more-icon{
+        margin-left: 8px;
+        margin-right: 16px;
+    }
+    &__more-icon--open{
+        transform: rotate(360deg);
+    }
+    &__more-icon--close{
+        transform: rotate(180deg);
+    }
+    &__more-text{
+        margin-right: 8px;
+    }
+    &__img{
+        display: block;
+        width: 320px;
+        height: 176px;
+        align-self: center;
+    }
+
+}
+@media (min-width: 768px) {
+    .main{
+        &__title::before{
+            margin-right: 20px;
+        }
+        &__about{
+            margin: 32px 24px;
+            flex-direction: row;
+            justify-content: space-between;
+        } 
+        &__idea{
+            margin: auto;
+        }
+        &__text{ 
+            line-height: 20px;
+        }
+        &__text--close{
+            height: 160px;
+        }
+        &__img{
+            align-self: unset;
+            margin-left: 48px;
+            width: 360px;
+            height: 208px;
+        }
+        &__read-more{
+            margin-top: 10px;
+            margin-bottom: 14px;
+        }
+
+    }
+}
+@media (min-width: 915px) {
+    .main{
+        &__text--close{
+            height: auto;
+        }
+        &__read-more{
+            cursor: default;
+        }
+        &__read-more:hover{
+            text-decoration: none;
+        }
+        &__more-text{
+            color: var(--focus-color);
+        }
+    }
+}
+@media (min-width: 1120px) {
+    .main{
+        &__title::before{
+            margin-right: 30px;
+        }
+        &__nav{
+            margin-top: 8.37px;
+        }
+        &__list{
+            flex-wrap: wrap;
+            overflow-x: unset;
+        }
+        
+        &__list::after{
+            display: none;
+        }
+        &__about{
+            margin: 0 34px;
+            margin-bottom: 51px;
+        }
+        &__idea{
+            margin: 0;
+            margin-top: 10px;
+        }
+        &__img{
+            width: 531.35px;
+            height: 307px;
+            margin-left: 36px;
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .main{
+        width: calc(100% - 320px);
+        transform: translateX(320px);
+    }
+}

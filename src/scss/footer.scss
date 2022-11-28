@@ -1,0 +1,69 @@
+.footer{
+    display: flex;
+    border-top: 1px solid var(--blue-line-color) ;
+    min-height: 85px;
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--focus-color);
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    align-items: center;
+
+    &__copyright{
+        margin-bottom: 16px;
+    }
+    &__politics{
+        margin-bottom: 16px;
+        border-radius: 6px;
+    }
+    &__politics:hover{
+        text-decoration: underline;
+    }
+    &__politics:focus{
+        outline: 1px solid var(--focus-color);
+    }
+    &__politics:active{
+        outline: 1px solid var(--active-color);
+    }
+}
+@media (min-width: 768px) {
+    .footer{
+        flex-direction: row;
+        padding: 24px;
+        padding-top: 32px;
+
+        &__copyright{
+            width: 218px;
+            margin-right: auto;
+            text-align: left;            
+        }
+        &__politics{
+            width: 214px;
+            text-align: center;            
+        }
+        &__info{
+            width: 213px;
+            margin-left: auto;
+            text-align: right;            
+        }
+    }
+}
+@media (min-width: 1120px) {
+    .footer{
+        &__info{
+            width: 330px;
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .footer{
+        width: calc(100% - 320px);
+        transform: translateX(320px);
+    }
+}

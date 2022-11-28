@@ -1,0 +1,202 @@
+.slider-technique{
+    &__title{
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        color: var(--focus-color);
+        padding: 16px;
+        border-top: 1px solid var(--blue-line-color);
+        background: linear-gradient(-270deg, var(--main-bg-color) 0%, var(--white) 98.61%);
+        box-sizing: border-box;
+    }
+    &__about{
+        padding: 0;
+        overflow: hidden;
+        position: relative; 
+    }
+    &__about::after{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        content: '';
+        width: 24px;
+        height: 188px;
+        background: linear-gradient(270deg, var(--main-bg-color) 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+        z-index: 1;        
+    }
+    &__container{
+        margin: 16px;       
+    }
+    &__cards{
+        height: 160px;
+        margin-bottom: 16px;        
+    }
+    &__pagination{
+        position:initial;
+        height: 12px;
+        padding: 0 42px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.swiper-pagination-bullet{
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--bullet-color);
+    opacity: 1;
+    margin: 0;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--active-bullet-color);
+    opacity: 1;
+}
+
+.technique-cards{
+    &__card{
+        display: flex;
+        align-items: center;
+        background: var(--white);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        min-height: 160px;
+        padding: 16px;
+        transition: all 0.3s;
+
+    }
+    &__title{
+        font-family: 'TT Lakes';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 500;   
+        display: block;
+        margin-bottom: auto;
+        margin-right: auto;     
+    }
+    &__card:hover, 
+    &__card:focus{
+        border: 1px solid var(--focus-color);
+    }
+    &__card:active{
+        border: 1px solid var(--active-color);
+    }
+    &__dropdown{
+        margin-top: auto;
+        transition: all 0.5s;
+    }
+    &__dropdown:hover{
+        transform: scale(1.1);
+    }
+    &__dropdown:focus{
+        transform: scale(1.2);
+    }
+    &__dropdown:active{
+        transform: scale(0.9);
+    }
+    &__button-more{
+        display: none;
+    }
+    
+}
+@media (min-width: 768px) {
+    .slider-technique{
+        &__title{
+            padding-left: 24px;
+        }
+        &__about{
+            padding: 24px;
+            padding-bottom: 34px;
+        }
+        &__about::after{
+            display: none;
+        }
+        &__container{
+            height: auto;
+            margin: 0;         
+        }
+        &__cards{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 16px;
+            column-gap: 24px;
+            overflow: hidden;            
+        }
+        &__cards--close{
+            height: 160px;
+        }
+        &__cards--open{
+            height: auto;
+        }
+        &__pagination{
+            display: none;
+        }
+    }
+    .technique-cards{
+        &__button-more{
+            display: flex;
+            justify-content: flex-start;
+            width: auto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 6px;
+         
+        }
+        &__more-img{
+            margin-left: 8px;
+            margin-right: 16px;
+        }
+        &__more-img--open{
+            transform: rotate(360deg);
+        }
+        &__more-img--close{
+            transform: rotate(180deg);
+        }
+        &__more-text{
+            margin-right: 8px;
+        }
+        &__button-more:hover{
+            text-decoration: underline;
+        }
+        &__button-more:focus{
+            background-color: var(--border-color);
+        }
+        &__button-more:active{
+            outline: 1px solid var(--focus-color);
+        } 
+    }
+}
+@media (min-width: 1120px) {
+    .slider-technique{
+        &__title{
+            padding-left: 32px;
+        }
+        &__about{
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+        &__cards{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 32px;  
+        }   
+
+    }
+    .technique-cards__card{
+        min-width: 240px;
+    }
+
+}
+@media (min-width: 1366px) {
+    .slider-technique{
+        width: calc(100% - 320px);
+        transform: translateX(320px);        
+    }
+}
