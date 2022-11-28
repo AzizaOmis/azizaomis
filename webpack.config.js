@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   // Входной файл
-  entry: ['./js/index.js'],
+  entry: ['./src/js/index.js'],
 
   // Выходной файл
   output: {
@@ -20,7 +20,7 @@ module.exports = {
       // Транспилируем js с babel
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, '/js'),
+        include: path.resolve(__dirname, 'src/js'),
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -66,7 +66,7 @@ module.exports = {
     // Подключаем файл html, стили и скрипты встроятся автоматически
     new HtmlWebpackPlugin({
       title: 'Webpack 4 Starter',
-      template: './index.html',
+      template: './src/index.html',
       inject: true,
       minify: {
         removeComments: true,
@@ -82,7 +82,7 @@ module.exports = {
     // Копируем картинки
     new CopyWebpackPlugin([
       {
-        from: './img',
+        from: './src/img',
         to: 'img'
       }
     ])
