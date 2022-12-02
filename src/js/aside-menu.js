@@ -4,7 +4,17 @@ window.addEventListener('DOMContentLoaded', () => {
   const buttonMenuClose = document.querySelector('.button__menu-close')
   const buttonCall = asideMenu.querySelector('.button__call')
   const buttonChat = asideMenu.querySelector('.button__chat')
+  const menuMainTexts = document.querySelectorAll('.menu-main__text')
+  const mediaQuery = '(min-width: 1366px)'
+  const mediaQueryList = window.matchMedia(mediaQuery)
 
+  for (let menuMainText of menuMainTexts) {
+    menuMainText.addEventListener('click', function () {
+      let activeText = document.querySelector('.menu-main__text--active')
+      activeText.classList.remove('menu-main__text--active')
+      this.classList.add('menu-main__text--active')
+    })
+  }
   buttonMenuOpen.addEventListener('click', function () {
     asideMenu.classList.toggle('aside-menu--open')
     asideMenu.classList.toggle('aside-menu--close')
@@ -20,13 +30,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
   buttonCall.addEventListener('click', function () {
-    if (window.screen.width < 1440) {
+    if (!mediaQueryList.matches) {
       asideMenu.classList.toggle('aside-menu--open')
       asideMenu.classList.toggle('aside-menu--close')
     }
   })
   buttonChat.addEventListener('click', function () {
-    if (window.screen.width < 1440) {
+    if (!mediaQueryList.matches) {
       asideMenu.classList.toggle('aside-menu--open')
       asideMenu.classList.toggle('aside-menu--close')
     }
